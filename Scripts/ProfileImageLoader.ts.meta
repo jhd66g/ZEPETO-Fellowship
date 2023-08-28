@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 377dd72412a13cb4d9361636a57f19dc
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nclass ProfileImageLoader extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this.tries = 0;\r\n        this.maxTries = 10;\r\n    }\r\n    Start() {\r\n       
+    this.img = this.GetComponent($typeof(UnityEngine_UI_1.Image));\r\n        this.StartCoroutine(this.LoadProfilePic());\r\n   
+    }\r\n    GetSprite(texture) {\r\n        let rect = new UnityEngine_1.Rect(0,
+    0, texture.width, texture.height);\r\n        return UnityEngine_1.Sprite.Create(texture,
+    rect, new UnityEngine_1.Vector2(0.5, 0.5));\r\n    }\r\n    *LoadProfilePic()
+    {\r\n        ZEPETO_World_1.ZepetoWorldHelper.GetProfileTexture(ZEPETO_World_1.WorldService.userId,
+    (texture) => {\r\n            this.img.sprite = this.GetSprite(texture);\r\n       
+    }, (error) => {\r\n            console.log(error);\r\n        });\r\n    }\r\n}\r\nexports.default
+    = ProfileImageLoader;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUHJvZmlsZUltYWdlTG9hZGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUHJvZmlsZUltYWdlTG9hZGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXVGO0FBQ3ZGLGlEQUFxRDtBQUNyRCwrQ0FBOEQ7QUFDOUQsbURBQXVDO0FBRXZDLE1BQXFCLGtCQUFtQixTQUFRLHFDQUFxQjtJQUFyRTs7UUFJWSxVQUFLLEdBQVcsQ0FBQyxDQUFDO1FBQ2xCLGFBQVEsR0FBVyxFQUFFLENBQUM7SUFtQmxDLENBQUM7SUFsQkcsS0FBSztRQUNELElBQUksQ0FBQyxHQUFHLEdBQUcsSUFBSSxDQUFDLFlBQVksU0FBQyxzQkFBSyxFQUFHLENBQUM7UUFDdEMsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsY0FBYyxFQUFFLENBQUMsQ0FBQztJQUMvQyxDQUFDO0lBRUQsU0FBUyxDQUFDLE9BQWdCO1FBQ3RCLElBQUksSUFBSSxHQUFTLElBQUksa0JBQUksQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLE9BQU8sQ0FBQyxLQUFLLEVBQUUsT0FBTyxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBQy9ELE9BQU8sb0JBQU0sQ0FBQyxNQUFNLENBQUMsT0FBb0IsRUFBRSxJQUFJLEVBQUUsSUFBSSxxQkFBTyxDQUFDLEdBQUcsRUFBRSxHQUFHLENBQUMsQ0FBQyxDQUFDO0lBQzVFLENBQUM7SUFFTyxDQUFDLGNBQWM7UUFFbkIsZ0NBQWlCLENBQUMsaUJBQWlCLENBQUMsMkJBQVksQ0FBQyxNQUFNLEVBQUUsQ0FBQyxPQUFnQixFQUFFLEVBQUU7WUFDMUUsSUFBSSxDQUFDLEdBQUcsQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxPQUFPLENBQUMsQ0FBQztRQUM5QyxDQUFDLEVBQUUsQ0FBQyxLQUFLLEVBQUUsRUFBRTtZQUNULE9BQU8sQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDdkIsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0NBQ0o7QUF4QkQscUNBd0JDIn0=","assetPath":"Assets/Scripts/ProfileImageLoader.ts","manifest":{"properties":[],"name":"ProfileImageLoader","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 5b8fe562904b6e7db3a09424fda6e8f7
+  onlyWriteTrigger: 0

@@ -1,0 +1,44 @@
+fileFormatVersion: 2
+guid: b431131197d6ccf4c99584281dce6679
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    RootNamespace_1 = require(\"RootNamespace\");\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nclass
+    HorzontalMovementControls extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n   
+    Start() {\r\n        this.myInputControl = new RootNamespace_1.ZepetoInputControl();\r\n       
+    this.myInputControl.Enable();\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.myCharacter = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n           
+    this.zepetoScreenPad = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.transform.Find(\"UIZepetoPlayerControl\").Find(\"SafeArea\").Find(\"Pad\").GetComponent($typeof(ZEPETO_Character_Controller_1.ZepetoScreenTouchpad));\r\n           
+    this.zepetoScreenPad.OnDragEvent.AddListener(deltaVector => {\r\n               
+    console.log(`[OnDragEvent] : ${deltaVector.ToString()}`);\r\n               
+    this.myCharacter.MoveContinuously(new UnityEngine_1.Vector3(deltaVector.x, 0,
+    0));\r\n            });\r\n            this.zepetoScreenPad.OnPointerUpEvent.AddListener(()
+    => {\r\n                this.myCharacter.StopMoving();\r\n            });\r\n       
+    });\r\n    }\r\n    Update() {\r\n        if (UnityEngine_1.Input.GetKey(UnityEngine_1.KeyCode.D))
+    {\r\n            this.myCharacter.Move(new UnityEngine_1.Vector3(1, 0, 0));\r\n       
+    }\r\n        if (UnityEngine_1.Input.GetKey(UnityEngine_1.KeyCode.A)) {\r\n           
+    this.myCharacter.Move(new UnityEngine_1.Vector3(-1, 0, 0));\r\n        }\r\n       
+    if (UnityEngine_1.Input.GetKey(UnityEngine_1.KeyCode.Space)) {\r\n           
+    this.myCharacter.Jump();\r\n        }\r\n        if (UnityEngine_1.Input.GetKey(UnityEngine_1.KeyCode.LeftShift))
+    {\r\n            this.myCharacter.DoubleJump();\r\n        }\r\n    }\r\n}\r\nexports.default
+    = HorzontalMovementControls;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2lkZVZpZXdJbnB1dEN1c3RvbWl6YXRpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTaWRlVmlld0lucHV0Q3VzdG9taXphdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCw2RUFBaUc7QUFDakcsaURBQWlEO0FBQ2pELDZDQUFvRTtBQUdwRSxNQUFxQix5QkFBMEIsU0FBUSxxQ0FBcUI7SUFLeEUsS0FBSztRQUNELElBQUksQ0FBQyxjQUFjLEdBQUcsSUFBSSxrQ0FBa0IsRUFBRSxDQUFDO1FBRS9DLElBQUksQ0FBQyxjQUFjLENBQUMsTUFBTSxFQUFFLENBQUM7UUFDN0IsMkNBQWEsQ0FBQyxRQUFRLENBQUMsa0JBQWtCLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUN2RCxJQUFJLENBQUMsV0FBVyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDO1lBQzdFLElBQUksQ0FBQyxlQUFlLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyx1QkFBdUIsQ0FBQyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUMsWUFBWSxTQUFDLGtEQUFvQixFQUFHLENBQUM7WUFFeEosSUFBSSxDQUFDLGVBQWUsQ0FBQyxXQUFXLENBQUMsV0FBVyxDQUFDLFdBQVcsQ0FBQyxFQUFFO2dCQUN2RCxPQUFPLENBQUMsR0FBRyxDQUFDLG1CQUFtQixXQUFXLENBQUMsUUFBUSxFQUFFLEVBQUUsQ0FBQyxDQUFDO2dCQUN6RCxJQUFJLENBQUMsV0FBVyxDQUFDLGdCQUFnQixDQUFDLElBQUkscUJBQU8sQ0FBQyxXQUFXLENBQUMsQ0FBQyxFQUFFLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1lBQ3ZFLENBQUMsQ0FBQyxDQUFDO1lBRUgsSUFBSSxDQUFDLGVBQWUsQ0FBQyxnQkFBZ0IsQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO2dCQUNuRCxJQUFJLENBQUMsV0FBVyxDQUFDLFVBQVUsRUFBRSxDQUFDO1lBQ2xDLENBQUMsQ0FBQyxDQUFDO1FBQ1AsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0lBRUQsTUFBTTtRQUVGLElBQUksbUJBQUssQ0FBQyxNQUFNLENBQUMscUJBQU8sQ0FBQyxDQUFDLENBQUMsRUFDM0I7WUFDSSxJQUFJLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFFLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1NBQzlDO1FBRUQsSUFBSSxtQkFBSyxDQUFDLE1BQU0sQ0FBQyxxQkFBTyxDQUFDLENBQUMsQ0FBQyxFQUMzQjtZQUNJLElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLElBQUkscUJBQU8sQ0FBQyxDQUFDLENBQUMsRUFBRSxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztTQUMvQztRQUVELElBQUksbUJBQUssQ0FBQyxNQUFNLENBQUMscUJBQU8sQ0FBQyxLQUFLLENBQUMsRUFDL0I7WUFDSSxJQUFJLENBQUMsV0FBVyxDQUFDLElBQUksRUFBRSxDQUFDO1NBQzNCO1FBRUQsSUFBSSxtQkFBSyxDQUFDLE1BQU0sQ0FBQyxxQkFBTyxDQUFDLFNBQVMsQ0FBQyxFQUNuQztZQUNJLElBQUksQ0FBQyxXQUFXLENBQUMsVUFBVSxFQUFFLENBQUM7U0FDakM7SUFDTCxDQUFDO0NBQ0o7QUE5Q0QsNENBOENDIn0=","assetPath":"Assets/Scripts/SideViewInputCustomization.ts","manifest":{"properties":[],"name":"HorzontalMovementControls","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 5e856b6df1ba44b4c024a66393ef2e69
+  onlyWriteTrigger: 0

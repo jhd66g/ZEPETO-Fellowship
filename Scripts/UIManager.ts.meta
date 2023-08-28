@@ -1,0 +1,75 @@
+fileFormatVersion: 2
+guid: 20249db0b9f75164fa459d708e50bd54
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nexports.WindowCallType = void 0;\r\nconst UnityEngine_1
+    = require(\"UnityEngine\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ItemCollectionManager_1 = require(\"./ItemCollectionManager\");\r\nconst StartMenuWindow_1
+    = require(\"./StartMenuWindow\");\r\nconst EndMenuWindow_1 = require(\"./EndMenuWindow\");\r\nvar
+    WindowCallType;\r\n(function (WindowCallType) {\r\n    WindowCallType[WindowCallType[\"SHOW_START_MENU_WINDOW\"]
+    = 1] = \"SHOW_START_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"HIDE_START_MENU_WINDOW\"]
+    = 2] = \"HIDE_START_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"SHOW_END_MENU_WINDOW\"]
+    = 3] = \"SHOW_END_MENU_WINDOW\";\r\n    WindowCallType[WindowCallType[\"HIDE_END_MENU_WINDOW\"]
+    = 4] = \"HIDE_END_MENU_WINDOW\";\r\n})(WindowCallType = exports.WindowCallType
+    || (exports.WindowCallType = {}));\r\nclass UIManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.currentPoints
+    = 0;\r\n        this.maxPoints = 10;\r\n        this.maxHealthIndex = 2;\r\n       
+    this.currentHealthIndex = 0;\r\n    }\r\n    Start() {\r\n        console.log(this.points);
+    // Add this line to debug\r\n        ItemCollectionManager_1.default.GetInstance().AddListener((info)
+    => { this.OnItemCollect(info); });\r\n    }\r\n    GetPoints(value) {\r\n       
+    let curValue = this.points.size; // Read the current size\r\n        let newValue
+    = curValue + (value / this.maxPoints);\r\n        this.points.size = Math.min(newValue,
+    1); // Update the size, making sure it doesn''t exceed 1\r\n        if (newValue
+    >= 1) // This means that points have reached or exceeded maxPoints\r\n        
+    {\r\n            this.ExecuteWindowCommand(WindowCallType.SHOW_END_MENU_WINDOW);\r\n       
+    }\r\n    }\r\n    get StartMenuWindow() {\r\n        if (this._startMenuWindow
+    != undefined) {\r\n            return this._startMenuWindow;\r\n        }\r\n       
+    else {\r\n            return this.StartMenuWindowGO.GetComponent($typeof(StartMenuWindow_1.default));\r\n       
+    }\r\n    }\r\n    get EndMenuWindow() {\r\n        if (this._endMenuWindow !=
+    undefined) {\r\n            return this._endMenuWindow;\r\n        }\r\n       
+    else {\r\n            return this.EndMenuWindowGO.GetComponent($typeof(EndMenuWindow_1.default));\r\n       
+    }\r\n    }\r\n    InitWindows() {\r\n    }\r\n    HideAllWindows() {\r\n       
+    this.StartMenuWindow.HideWindow();\r\n        this.EndMenuWindow.HideWindow();\r\n   
+    }\r\n    ExecuteWindowCommand(windowCallType) {\r\n        switch (windowCallType)
+    {\r\n            case WindowCallType.SHOW_START_MENU_WINDOW:\r\n               
+    this.HideAllWindows();\r\n                this.StartMenuWindow.ShowWindow();\r\n               
+    break;\r\n            case WindowCallType.HIDE_START_MENU_WINDOW:\r\n               
+    this.StartMenuWindow.HideWindow();\r\n                break;\r\n            case
+    WindowCallType.SHOW_END_MENU_WINDOW:\r\n                this.HideAllWindows();\r\n               
+    this.EndMenuWindow.ShowWindow();\r\n                break;\r\n            case
+    WindowCallType.HIDE_END_MENU_WINDOW:\r\n                this.EndMenuWindow.HideWindow();\r\n               
+    break;\r\n            default:\r\n                break;\r\n        }\r\n   
+    }\r\n    OnItemCollect(info) {\r\n        if (info.tag == \"Point\")\r\n           
+    this.GetPoints(info.value);\r\n        else if (info.tag == \"Health\") {\r\n           
+    if (this.currentHealthIndex >= 0 && this.currentHealthIndex <= this.maxHealthIndex)
+    {\r\n                this.currentHealthIndex--;\r\n                this.SetHealthBar(this.currentHealthIndex,
+    true);\r\n            }\r\n        }\r\n        else if (info.tag == \"Enemy\")
+    {\r\n            if (this.currentHealthIndex < this.maxHealthIndex) {\r\n               
+    this.SetHealthBar(this.currentHealthIndex, false);\r\n                this.currentHealthIndex++;\r\n           
+    }\r\n        }\r\n    }\r\n    SetHealthBar(index, active) {\r\n        let bar
+    = this.healthBars[index];\r\n        if (active)\r\n            bar.sprite =
+    this.healthBarFull;\r\n        else\r\n            bar.sprite = this.healthBarEmpty;\r\n   
+    }\r\n    ResetGame() {\r\n        this.currentPoints = 0;\r\n        this.points.size
+    = 0; // Reset the points'' scrollbar size\r\n        this.currentHealthIndex
+    = 0; // Reset health\r\n        this.healthBars.forEach((bar, index) => {\r\n           
+    this.SetHealthBar(index, true); // Reset the health bar to full\r\n        });\r\n       
+    this.HideAllWindows();\r\n    }\r\n}\r\nexports.default = UIManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVUlNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiVUlNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLDZDQUFpRDtBQUVqRCxpREFBcUQ7QUFDckQsbUVBQWtEO0FBRWxELHVEQUFnRDtBQUNoRCxtREFBNEM7QUFFNUMsSUFBWSxjQU1YO0FBTkQsV0FBWSxjQUFjO0lBQ3RCLHVGQUEwQixDQUFBO0lBQzFCLHVGQUEwQixDQUFBO0lBRTFCLG1GQUF3QixDQUFBO0lBQ3hCLG1GQUF3QixDQUFBO0FBQzVCLENBQUMsRUFOVyxjQUFjLEdBQWQsc0JBQWMsS0FBZCxzQkFBYyxRQU16QjtBQUVELE1BQXFCLFNBQVUsU0FBUSxxQ0FBcUI7SUFBNUQ7O1FBT1ksa0JBQWEsR0FBVyxDQUFDLENBQUM7UUFDM0IsY0FBUyxHQUFHLEVBQUUsQ0FBQztRQVFkLG1CQUFjLEdBQVksQ0FBQyxDQUFDO1FBQzVCLHVCQUFrQixHQUFZLENBQUMsQ0FBQztJQXFINUMsQ0FBQztJQW5ITSxLQUFLO1FBQ1IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyx5QkFBeUI7UUFDbkQsK0JBQVcsQ0FBQyxXQUFXLEVBQUUsQ0FBQyxXQUFXLENBQUMsQ0FBQyxJQUFJLEVBQUUsRUFBRSxHQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQSxDQUFDLENBQUMsQ0FBQztJQUNqRixDQUFDO0lBR00sU0FBUyxDQUFDLEtBQWE7UUFFMUIsSUFBSSxRQUFRLEdBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsQ0FBQyx3QkFBd0I7UUFDekQsSUFBSSxRQUFRLEdBQUcsUUFBUSxHQUFHLENBQUMsS0FBSyxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUNuRCxJQUFJLENBQUMsTUFBTSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsR0FBRyxDQUFDLFFBQVEsRUFBRSxD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","assetPath":"Assets/Scripts/UIManager.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"StartMenuWindowGO","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"EndMenuWindowGO","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"maxPoints","type":"System.Single","isArray":false,"initValue":["10"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"healthBarFull","type":"UnityEngine.Sprite","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"healthBarEmpty","type":"UnityEngine.Sprite","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"healthBars","type":"UnityEngine.UI.Image[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"points","type":"UnityEngine.UI.Scrollbar","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"UIManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 42241738195d7f8806049febd9b2cbbd
+  onlyWriteTrigger: 0

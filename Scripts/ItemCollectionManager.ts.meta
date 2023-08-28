@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: bf24eba3bc7250147937987801d4f389
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    ItemCollection_1 = require(\"./ItemCollection\");\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nclass
+    ItemCollectionManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n   
+    constructor() {\r\n        super(...arguments);\r\n        this.onCollect = new
+    Array();\r\n        this.itemMap = new Map();\r\n        this.coinsCount = 0;\r\n   
+    }\r\n    static GetInstance() {\r\n        if (ItemCollectionManager.instance
+    == undefined) {\r\n            ItemCollectionManager.instance = new UnityEngine_1.GameObject(\"ItemCollectionManager\").AddComponent($typeof(ItemCollectionManager));\r\n       
+    }\r\n        return ItemCollectionManager.instance;\r\n    }\r\n    AddCoin(item)
+    {\r\n        this.itemMap.set(this.coinsCount, item);\r\n        item.SetItemID(this.coinsCount);\r\n       
+    this.coinsCount++;\r\n    }\r\n    RemoveCoin(id) {\r\n        this.itemMap.delete(id);\r\n   
+    }\r\n    AddListener(event) {\r\n        this.onCollect.push(event);\r\n    }\r\n   
+    CollectCoin(id) {\r\n        let coin = this.itemMap.get(id);\r\n        this.onCollect.forEach((event)
+    => {\r\n            event({ tag: coin.tag, value: coin.itemValue });\r\n       
+    });\r\n    }\r\n}\r\nexports.default = ItemCollectionManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSXRlbUNvbGxlY3Rpb25NYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiSXRlbUNvbGxlY3Rpb25NYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBRXJELHFEQUE4QztBQUM5Qyw2Q0FBeUM7QUFZekMsTUFBcUIscUJBQXNCLFNBQVEscUNBQXFCO0lBQXhFOztRQVlXLGNBQVMsR0FBb0IsSUFBSSxLQUFLLEVBQWdCLENBQUM7UUFDdEQsWUFBTyxHQUFnQyxJQUFJLEdBQUcsRUFBMEIsQ0FBQztRQUV6RSxlQUFVLEdBQUcsQ0FBQyxDQUFDO0lBMEIzQixDQUFDO0lBeENVLE1BQU0sQ0FBQyxXQUFXO1FBRXJCLElBQUkscUJBQXFCLENBQUMsUUFBUSxJQUFJLFNBQVMsRUFDL0M7WUFDSSxxQkFBcUIsQ0FBQyxRQUFRLEdBQUcsSUFBSSx3QkFBVSxDQUFDLHVCQUF1QixDQUFDLENBQUMsWUFBWSxTQUFDLHFCQUFxQixFQUFHLENBQUM7U0FDbEg7UUFDRCxPQUFPLHFCQUFxQixDQUFDLFFBQVEsQ0FBQztJQUMxQyxDQUFDO0lBU00sT0FBTyxDQUFDLElBQXFCO1FBRWhDLElBQUksQ0FBQyxPQUFPLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxVQUFVLEVBQUUsSUFBSSxDQUFDLENBQUM7UUFDeEMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLENBQUM7UUFDaEMsSUFBSSxDQUFDLFVBQVUsRUFBRSxDQUFDO0lBQ3RCLENBQUM7SUFFTSxVQUFVLENBQUMsRUFBVTtRQUV4QixJQUFJLENBQUMsT0FBTyxDQUFDLE1BQU0sQ0FBQyxFQUFFLENBQUMsQ0FBQztJQUM1QixDQUFDO0lBRU0sV0FBVyxDQUFDLEtBQW1CO1FBRWxDLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQy9CLENBQUM7SUFFTSxXQUFXLENBQUMsRUFBVTtRQUV6QixJQUFJLElBQUksR0FBb0IsSUFBSSxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLENBQUM7UUFDakQsSUFBSSxDQUFDLFNBQVMsQ0FBQyxPQUFPLENBQUMsQ0FBQyxLQUFLLEVBQUUsRUFBRTtZQUM3QixLQUFLLENBQUMsRUFBQyxHQUFHLEVBQUUsSUFBSSxDQUFDLEdBQUcsRUFBRSxLQUFLLEVBQUUsSUFBSSxDQUFDLFNBQVMsRUFBQyxDQUFDLENBQUM7UUFDbEQsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0NBQ0o7QUF6Q0Qsd0NBeUNDIn0=","assetPath":"Assets/Scripts/ItemCollectionManager.ts","manifest":{"properties":[{"assembly":"","name":"onCollect","type":"CollectEvent","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ItemCollectionManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: c543036997b324e747be7987fb17a54c
+  onlyWriteTrigger: 0

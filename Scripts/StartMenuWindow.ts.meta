@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: 2e33fe71c56b298489f7342259f9ef6b
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nconst
+    Main_1 = require(\"./Main\");\r\nclass StartMenuWindow extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    static LoadCharacter() {\r\n        throw new Error(''Method not implemented.'');\r\n   
+    }\r\n    Start() {\r\n        this.StartButton.onClick.AddListener(() => { Main_1.default.GetUIManager().HideAllWindows();
+    });\r\n        this.StartButton.onClick.AddListener(() => { this.LoadCharacter();
+    });\r\n    }\r\n    ShowWindow() {\r\n        this.gameObject.SetActive(true);\r\n   
+    }\r\n    HideWindow() {\r\n        this.gameObject.SetActive(false);\r\n    }\r\n   
+    LoadCharacter() {\r\n        let info = new ZEPETO_Character_Controller_1.SpawnInfo();\r\n       
+    info.position = this.spawnPoint.position;\r\n        info.rotation = this.spawnPoint.rotation;\r\n       
+    $extension(\"ZEPETO.Character.Controller.ZepetoPlayersExtension\").CreatePlayerWithUserId(ZEPETO_Character_Controller_1.ZepetoPlayers.instance,
+    ZEPETO_World_1.WorldService.userId, info, true);\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            let player = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer;\r\n           
+    player.zepetoPlayer.character.gameObject.tag = \"Player\";\r\n            player.zepetoPlayer.character.gameObject.name
+    = ZEPETO_World_1.WorldService.userId;\r\n        });\r\n    }\r\n}\r\nexports.default
+    = StartMenuWindow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3RhcnRNZW51V2luZG93LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU3RhcnRNZW51V2luZG93LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUEsNkVBQWtHO0FBQ2xHLGlEQUFxRDtBQUNyRCwrQ0FBNEM7QUFDNUMsaUNBQTBCO0FBRTFCLE1BQXFCLGVBQWdCLFNBQVEscUNBQXFCO0lBQzlELE1BQU0sQ0FBQyxhQUFhO1FBQ2hCLE1BQU0sSUFBSSxLQUFLLENBQUMseUJBQXlCLENBQUMsQ0FBQztJQUMvQyxDQUFDO0lBS0QsS0FBSztRQUNELElBQUksQ0FBQyxXQUFXLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUUsR0FBRSxjQUFJLENBQUMsWUFBWSxFQUFFLENBQUMsY0FBYyxFQUFFLENBQUMsQ0FBQSxDQUFDLENBQUMsQ0FBQztRQUNwRixJQUFJLENBQUMsV0FBVyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFLEdBQUUsSUFBSSxDQUFDLGFBQWEsRUFBRSxDQUFBLENBQUEsQ0FBQyxDQUFDLENBQUM7SUFDdkUsQ0FBQztJQUVNLFVBQVU7UUFDYixJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUNwQyxDQUFDO0lBRU0sVUFBVTtRQUNiLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ3JDLENBQUM7SUFFTSxhQUFhO1FBQ2hCLElBQUksSUFBSSxHQUFHLElBQUksdUNBQVMsRUFBRSxDQUFDO1FBQzNCLElBQUksQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxRQUFRLENBQUM7UUFDekMsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLFFBQVEsQ0FBQztRQUV6QyxpRUFBdUIsc0JBQXNCLENBQTdDLDJDQUFhLENBQUMsUUFBUSxFQUF3QiwyQkFBWSxDQUFDLE1BQU0sRUFBRSxJQUFJLEVBQUUsSUFBSSxFQUFFO1FBQy9FLDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdkQsSUFBSSxNQUFNLEdBQWlCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQztZQUM5RCxNQUFNLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxVQUFVLENBQUMsR0FBRyxHQUFHLFFBQVEsQ0FBQztZQUN4RCxNQUFNLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxVQUFVLENBQUMsSUFBSSxHQUFHLDJCQUFZLENBQUMsTUFBTSxDQUFDO1FBQ3hFLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztDQUNKO0FBakNELGtDQWlDQyJ9","assetPath":"Assets/Scripts/StartMenuWindow.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"StartButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"spawnPoint","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"StartMenuWindow","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 98f1fb2fada619b155f57610b5bcca41
+  onlyWriteTrigger: 0

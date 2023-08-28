@@ -1,0 +1,36 @@
+fileFormatVersion: 2
+guid: 46208f3d7e6eb4e6984d8e3c634a80a2
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst UIManager_1 = require(\"./UIManager\");\r\nclass
+    Main extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    static GetInstance()
+    {\r\n        if (!Main._instance) {\r\n            Main._instance = UnityEngine_1.GameObject.Find(\"Main\").GetComponent($typeof(Main));\r\n       
+    }\r\n        return Main._instance;\r\n    }\r\n    static GetUIManager() {\r\n       
+    return Main._instance._UIManager;\r\n    }\r\n    Awake() {\r\n        if (ZEPETO_Script_1.ZepetoScriptBehaviour.op_Inequality(Main._instance,
+    null)) {\r\n            UnityEngine_1.GameObject.Destroy(Main._instance.gameObject);\r\n       
+    }\r\n        this._UIManager = this.UIManagerGO.GetComponent($typeof(UIManager_1.default));\r\n       
+    Main._instance = this;\r\n        if (this._UIManager) {\r\n            UnityEngine_1.Debug.Log(\"UIManager
+    is initialized\");\r\n        }\r\n        else {\r\n            UnityEngine_1.Debug.Log(\"UIManager
+    is not initialized\");\r\n        }\r\n    }\r\n}\r\nexports.default = Main;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTWFpbi5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1haW4udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBZ0Q7QUFDaEQsaURBQXFEO0FBQ3JELDJDQUF3RDtBQUV4RCxNQUFxQixJQUFLLFNBQVEscUNBQXFCO0lBTzVDLE1BQU0sQ0FBQyxXQUFXO1FBQ3JCLElBQUksQ0FBQyxJQUFJLENBQUMsU0FBUyxFQUFFO1lBQ2pCLElBQUksQ0FBQyxTQUFTLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsWUFBWSxTQUFDLElBQUksRUFBRyxDQUFDO1NBQ2pFO1FBQ0QsT0FBTyxJQUFJLENBQUMsU0FBUyxDQUFDO0lBQzFCLENBQUM7SUFFTSxNQUFNLENBQUMsWUFBWTtRQUN0QixPQUFPLElBQUksQ0FBQyxTQUFTLENBQUMsVUFBVSxDQUFDO0lBQ3JDLENBQUM7SUFFRCxLQUFLO1FBQ0QsSUF0QkMscUNBQXFCLENBaUNrOUwsYUFBYyxDQVhsL0wsSUFBSSxDQUFDLFNBQVMsRUFBSSxJQUFJLEdBQUU7WUFDeEIsd0JBQVUsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxVQUFVLENBQUMsQ0FBQztTQUNqRDtRQUNELElBQUksQ0FBQyxVQUFVLEdBQUcsSUFBSSxDQUFDLFdBQVcsQ0FBQyxZQUFZLFNBQUMsbUJBQVMsRUFBRyxDQUFDO1FBQzdELElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDO1FBQ3RCLElBQUksSUFBSSxDQUFDLFVBQVUsRUFBRTtZQUNqQixtQkFBSyxDQUFDLEdBQUcsQ0FBQywwQkFBMEIsQ0FBQyxDQUFDO1NBQ3pDO2FBQU07WUFDSCxtQkFBSyxDQUFDLEdBQUcsQ0FBQyw4QkFBOEIsQ0FBQyxDQUFDO1NBQzdDO0lBQ0wsQ0FBQztDQUNKO0FBOUJELHVCQThCQyJ9","assetPath":"Assets/Scripts/Main.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"UIManagerGO","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"","name":"_UIManager","type":"/Users/jackduncan/Desktop/Unity
+    Projects/MyProject3d/Assets/Scripts/UIManager.default","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Main","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: c6cba1721c07629258b0900838e5fbf9
+  onlyWriteTrigger: 0

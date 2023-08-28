@@ -1,0 +1,164 @@
+[World Settings]
+world id             com.zfp.slimeforest 
+version              0.1                 
+max clients          8                   
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+19 mb                assets/polytope studio/lowpoly_environments/sources/textures/pt_skybox_texture_01.png
+18 mb                assets/polytope studio/lowpoly_environments/sources/textures/pt_ground_grass_green_01.png
+4 mb                 assets/polytope studio/lowpoly_environments/sources/textures/pt_ground_generic_03.png
+4 mb                 assets/new terrain 2.asset
+2 mb                 assets/textmesh pro/resources/fonts & materials/liberationsans sdf.asset
+2 mb                 assets/gentleland/steampunkui/fonts/arvo/arvo sdf.asset
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_deep.anim
+1 mb                 assets/backgroundart2.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_turn.anim
+804 kb               assets/polytope studio/lowpoly_environments/sources/textures/pt_generic_leaves_01.png
+787 kb               assets/rpg monster duo pbr polyart/textures/albedo.png
+787 kb               assets/rpg monster duo pbr polyart/textures/emission.png
+734 kb               assets/gentleland/steampunkui/art/steampunk_ui_alternative_colors_2.png
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_idle.anim
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_slight.anim
+574 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landing_roll.anim
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+489 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_walk_fast.anim
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_double.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_dash.anim
+445 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run.anim
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jump_move.anim
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+422 kb               assets/polytope studio/lowpoly_environments/sources/textures/pt_tree_trunk_01.png
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/move_run_fast.anim
+330 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+327 kb               assets/polytope studio/lowpoly_environments/sources/meshes/trees/pt_fruit_tree_01_plums.fbx
+315 kb               assets/polytope studio/lowpoly_environments/sources/textures/pt_grass_02.png
+305 kb               assets/polytope studio/lowpoly_environments/sources/meshes/trees/pt_fruit_tree_01_green.fbx
+302 kb               assets/polytope studio/lowpoly_environments/sources/textures/pt_fruit_tree_leaves_01.png
+297 kb               packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimatorv2.controller
+276 kb               assets/polytope studio/lowpoly_environments/sources/textures/pt_grass_01.png
+228 kb               assets/rpg monster duo pbr polyart/animations/slime/victory_slime_anim.fbx
+224 kb               assets/polytope studio/lowpoly_environments/sources/textures/pt_poppy_01.png
+223 kb               assets/myscene.unity
+222 kb               assets/rpg monster duo pbr polyart/animations/slime/sensesomethingroutine_slime_anim.fbx
+216 kb               assets/rpg monster duo pbr polyart/animations/slime/sensesomethingstart_slime_anim.fbx
+214 kb               assets/polytope studio/lowpoly_environments/sources/textures/pt_grass_high_02.png
+209 kb               assets/rpg monster duo pbr polyart/animations/slime/idlenormal_slime_anim.fbx
+205 kb               assets/rpgpp_lt/models/structures/rpgpp_lt_building_03.fbx
+203 kb               assets/rpg monster duo pbr polyart/animations/slime/die_slime_anim.fbx
+203 kb               assets/rpg monster duo pbr polyart/animations/slime/dizzy_slime_anim.fbx
+196 kb               assets/rpg monster duo pbr polyart/animations/slime/walkright_slime_anim.fbx
+196 kb               assets/rpg monster duo pbr polyart/animations/slime/walkback_slime_anim.fbx
+196 kb               assets/rpg monster duo pbr polyart/animations/slime/walkleft_slime_anim.fbx
+196 kb               assets/rpg monster duo pbr polyart/animations/slime/walk_slime_anim.fbx
+193 kb               assets/rpg monster duo pbr polyart/animations/slime/gethit_slime_anim.fbx
+193 kb               assets/rpg monster duo pbr polyart/animations/slime/attack02_slime_anim.fbx
+193 kb               assets/rpg monster duo pbr polyart/animations/slime/attack01_slime_anim.fbx
+192 kb               assets/rpg monster duo pbr polyart/animations/slime/idlebattle_slime_anim.fbx
+190 kb               assets/rpg monster duo pbr polyart/animations/slime/run_slime_anim.fbx
+190 kb               assets/rpg monster duo pbr polyart/animations/slime/taunt_slime_anim.fbx
+101 kb               packages/com.unity.textmeshpro/editor resources/gizmos/tmp - font asset icon.psd
+87 kb                packages/com.unity.textmeshpro/editor resources/gizmos/tmp - text component icon.psd
+83 kb                assets/rpg monster duo pbr polyart/meshes/slimemesh.fbx
+83 kb                assets/polytope studio/lowpoly_environments/sources/meshes/shrubs/pt_generic_shrub_01_green.fbx
+82 kb                assets/myscene/reflectionprobe-0.exr
+73 kb                assets/rpgpp_lt/models/structures/rpgpp_lt_building_02.fbx
+72 kb                assets/polytope studio/lowpoly_environments/sources/meshes/trees/pt_fruit_tree_01_logs.fbx
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+51 kb                assets/polytope studio/lowpoly_environments/sources/meshes/rocks/pt_river_rock_pile_02.fbx
+46 kb                assets/rpgpp_lt/models/props/rpgpp_lt_wagon_01.fbx
+46 kb                assets/polytope studio/lowpoly_environments/sources/shaders/pt_rock_shader.shader
+45 kb                assets/polytope studio/lowpoly_environments/sources/meshes/rocks/pt_generic_rock_01.fbx
+45 kb                assets/polytope studio/lowpoly_environments/sources/meshes/flowers/pt_poppy_02.fbx
+39 kb                assets/gentleland/steampunkui/fonts/arvo/arvo.ttf
+38 kb                assets/rpgpp_lt/models/props/rpgpp_lt_well_01.fbx
+35 kb                assets/polytope studio/lowpoly_environments/sources/textures/pt_runes_02.png
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+34 kb                assets/rpgpp_lt/models/props/rpgpp_lt_hanger_clothes_01.fbx
+34 kb                assets/polytope studio/lowpoly_environments/sources/meshes/trees/pt_fruit_tree_01_stump.fbx
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+29 kb                assets/polytope studio/lowpoly_environments/sources/shaders/pt_vegetation_opaque_shader.shader
+28 kb                assets/polytope studio/lowpoly_environments/sources/shaders/pt_vegetation_foliage_shader.shader
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+26 kb                assets/polytope studio/lowpoly_environments/sources/shaders/pt_vegetation_flowers_shader.shader
+25 kb                assets/polytope studio/lowpoly_environments/sources/textures/pt_rocks_01.png
+24 kb                assets/rpgpp_lt/models/props/rpgpp_lt_wood_path_01b.fbx
+23 kb                assets/rpg monster duo pbr polyart/animators/slime.controller
+22 kb                assets/rpgpp_lt/textures/rpgpp_lt_tex_a.tga
+21 kb                assets/rpgpp_lt/models/props/rpgpp_lt_bird_house_01.fbx
+20 kb                assets/rpgpp_lt/models/props/rpgpp_lt_hanger_wood_01.fbx
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+17 kb                assets/myscene/lightingdata.asset
+13 kb                assets/rpg monster duo pbr polyart/prefabs/pbrdefault/slimepbr.prefab
+13 kb                assets/textmesh pro/resources/sprite assets/emojione.asset
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+10 kb                assets/textmesh pro/shaders/tmp_sdf.shader
+9 kb                 assets/polytope studio/lowpoly_environments/prefabs/trees/pt_fruit_tree_01_green.prefab
+9 kb                 assets/polytope studio/lowpoly_environments/prefabs/trees/pt_fruit_tree_01_plums.prefab
+9 kb                 assets/polytope studio/lowpoly_environments/prefabs/shrubs/pt_generic_shrub_01_green.prefab
+9 kb                 assets/polytope studio/lowpoly_environments/prefabs/rocks/pt_generic_rock_01.prefab
+9 kb                 assets/polytope studio/lowpoly_environments/prefabs/rocks/pt_river_rock_pile_02.prefab
+9 kb                 assets/textmesh pro/resources/fonts & materials/liberationsans sdf - fallback.asset
+8 kb                 assets/polytope studio/lowpoly_environments/prefabs/flowers/pt_poppy_02.prefab
+7 kb                 assets/rpgpp_lt/prefabs/structures/buildings/bld_closed/rpgpp_lt_building_03.prefab
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+6 kb                 assets/rpg monster duo pbr polyart/textures/metallic-smoothness.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+5 kb                 assets/rpgpp_lt/prefabs/props/misc/rpgpp_lt_well_01.prefab
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+5 kb                 assets/rpgpp_lt/prefabs/props/misc/rpgpp_lt_wagon_01.prefab
+4 kb                 assets/rpgpp_lt/materials/rpgpp_lt_mat_a.mat
+4 kb                 assets/textmesh pro/resources/style sheets/default style sheet.asset
+3 kb                 assets/rpgpp_lt/prefabs/structures/buildings/bld_closed/rpgpp_lt_building_02.prefab
+3 kb                 assets/oarielg/2dsimpleuipack/examples/graphics/ui-large-buttons-horizontal.png
+3 kb                 assets/rpgpp_lt/prefabs/props/furniture/hangers/rpgpp_lt_hanger_clothes_01.prefab
+3 kb                 assets/rpgpp_lt/prefabs/props/furniture/hangers/rpgpp_lt_hanger_wood_01.prefab
+3 kb                 assets/polytope studio/lowpoly_environments/sources/materials/pt_rocks_mat.mat
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+3 kb                 assets/polytope studio/lowpoly_environments/sources/materials/pt_generic_tree_leaves_mat.mat
+3 kb                 assets/polytope studio/lowpoly_environments/sources/materials/pt_poppy_mat.mat
+2 kb                 assets/polytope studio/lowpoly_environments/sources/materials/pt_fruit_tree_foliage_mat.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+2 kb                 assets/textmesh pro/resources/fonts & materials/liberationsans sdf - drop shadow.mat
+2 kb                 assets/polytope studio/lowpoly_environments/sources/materials/pt_fruit_tree_opaque_mat.mat
+2 kb                 assets/polytope studio/lowpoly_environments/sources/materials/pt_generic_tree_trunk_mat.mat
+2 kb                 assets/textmesh pro/resources/fonts & materials/liberationsans sdf - outline.mat
+2 kb                 assets/rpgpp_lt/prefabs/props/misc/rpgpp_lt_bird_house_01.prefab
+2 kb                 assets/rpgpp_lt/prefabs/structures/parts/wood_path/rpgpp_lt_wood_path_01b.prefab
+2 kb                 assets/polytope studio/lowpoly_environments/prefabs/trees/pt_fruit_tree_01_logs.prefab
+2 kb                 assets/polytope studio/lowpoly_environments/prefabs/trees/pt_fruit_tree_01_stump.prefab
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 assets/polytope studio/lowpoly_environments/sources/materials/pt_skybox_mat.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+2 kb                 assets/rpg monster duo pbr polyart/materials/pbrdefault.mat
+1 kb                 packages/zepeto.character.controller/runtime/_resources/camera/zepetocamera.prefab
+1 kb                 assets/textmesh pro/resources/tmp settings.asset
+1 kb                 assets/oarielg/2dsimpleuipack/examples/graphics/ui-large-buttons-vertical.png
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+732 b                assets/polytope studio/lowpoly_demos/environment_free/helpers/ground_layer_02.terrainlayer
+732 b                assets/polytope studio/lowpoly_demos/environment_free/helpers/ground_layer_01.terrainlayer
+269 b                assets/textmesh pro/resources/linebreaking following characters.txt
+95 b                 assets/textmesh pro/resources/linebreaking leading characters.txt

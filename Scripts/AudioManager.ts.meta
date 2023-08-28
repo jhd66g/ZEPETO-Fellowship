@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 9ef822f66c681c74d9b6b00ad8a05b78
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nclass AudioManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    static GetInstance() {\r\n        if (AudioManager.instance == undefined)
+    {\r\n            AudioManager.instance = new UnityEngine_1.GameObject(\"AudioManager\").AddComponent($typeof(AudioManager));\r\n       
+    }\r\n        return AudioManager.instance;\r\n    }\r\n    Awake() {\r\n    }\r\n}\r\nexports.default
+    = AudioManager;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQXVkaW9NYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQXVkaW9NYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQW1EO0FBQ25ELDZDQUFnRztBQUVoRyxNQUFxQixZQUFhLFNBQVEscUNBQXFCO0lBQ3BELE1BQU0sQ0FBQyxXQUFXO1FBRXJCLElBQUksWUFBWSxDQUFDLFFBQVEsSUFBSSxTQUFTLEVBQ3RDO1lBQ0ksWUFBWSxDQUFDLFFBQVEsR0FBRyxJQUFJLHdCQUFVLENBQUMsY0FBYyxDQUFDLENBQUMsWUFBWSxTQUFDLFlBQVksRUFBRyxDQUFDO1NBQ3ZGO1FBQ0QsT0FBTyxZQUFZLENBQUMsUUFBUSxDQUFDO0lBQ2pDLENBQUM7SUFNRCxLQUFLO0lBRUwsQ0FBQztDQUVKO0FBbEJELCtCQWtCQyJ9","assetPath":"Assets/Scripts/AudioManager.ts","manifest":{"properties":[],"name":"AudioManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 7f185c3db8d08aabc0a18776004a382c
+  onlyWriteTrigger: 0

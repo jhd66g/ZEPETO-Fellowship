@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: bbea78ee02204fe4f9f557345d3e6517
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Oscillation extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.point1
+    = new UnityEngine_1.Vector3(0, 1, 0);\r\n        this.point2 = new UnityEngine_1.Vector3(0,
+    -1, 0);\r\n        this.moveSpeed = 5;\r\n        this.curPoint = 0;\r\n       
+    this.progress = 0;\r\n    }\r\n    Start() {\r\n        this.startPos = this.transform.position;\r\n   
+    }\r\n    Update() {\r\n        this.transform.position = UnityEngine_1.Vector3.Lerp(UnityEngine_1.Vector3.op_Addition(this.startPos,
+    this.point1), UnityEngine_1.Vector3.op_Addition(this.startPos, this.point2),
+    (Math.sin(this.progress) + 1.0) / 2.0);\r\n        if (this.lookDir) {\r\n           
+    if ((this.progress % (Math.PI * 2.0)) > Math.PI / 2 && (this.progress % (Math.PI
+    * 2.0)) < (3 * Math.PI / 2))\r\n                this.transform.rotation = UnityEngine_1.Quaternion.LookRotation(UnityEngine_1.Vector3.op_Subtraction(this.point1,
+    this.point2));\r\n            else\r\n                this.transform.rotation
+    = UnityEngine_1.Quaternion.LookRotation(UnityEngine_1.Vector3.op_Subtraction(this.point2,
+    this.point1));\r\n        }\r\n        this.progress += UnityEngine_1.Time.deltaTime
+    * this.moveSpeed;\r\n    }\r\n}\r\nexports.default = Oscillation;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiT3NjaWxsYXRpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJPc2NpbGxhdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRTtBQUNsRSxpREFBcUQ7QUFFckQsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUE5RDs7UUFDVyxXQUFNLEdBQVksSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUM7UUFDckMsV0FBTSxHQUFZLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUM7UUFDdEMsY0FBUyxHQUFZLENBQUMsQ0FBQztRQUd0QixhQUFRLEdBQVksQ0FBQyxDQUFDO1FBQ3RCLGFBQVEsR0FBVyxDQUFDLENBQUM7SUF1QmpDLENBQUM7SUFwQlUsS0FBSztRQUVSLElBQUksQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUM7SUFDNUMsQ0FBQztJQUVELE1BQU07UUFFRixJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxxQkFBTyxDQUFDLElBQUksQ0FwQlQscUJBQU8sQ0FpQ29qcEIsV0FBWSxDQWI3anBCLElBQUksQ0FBQyxRQUFRLEVBQUcsSUFBSSxDQUFDLE1BQU0sR0FwQnJDLHFCQUFPLENBaUNvanBCLFdBQVksQ0FiaGlwQixJQUFJLENBQUMsUUFBUSxFQUFHLElBQUksQ0FBQyxNQUFNLEdBQUUsQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsR0FBRyxHQUFHLENBQUMsR0FBRyxHQUFHLENBQUMsQ0FBQztRQUV4SSxJQUFJLElBQUksQ0FBQyxPQUFPLEVBQ2hCO1lBQ0ksSUFBSSxDQUFDLElBQUksQ0FBQyxRQUFRLEdBQUcsQ0FBQyxJQUFJLENBQUMsRUFBRSxHQUFHLEdBQUcsQ0FBQyxDQUFDLEdBQUcsSUFBSSxDQUFDLEVBQUUsR0FBQyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsUUFBUSxHQUFHLENBQUMsSUFBSSxDQUFDLEVBQUUsR0FBRyxHQUFHLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxFQUFFLEdBQUMsQ0FBQyxDQUFDO2dCQUNwRyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyx3QkFBVSxDQUFDLFlBQVksQ0F6QjVCLHFCQUFPLENBaUNrb3BCLGNBQWUsQ0FSM25wQixJQUFJLENBQUMsTUFBTSxFQUFHLElBQUksQ0FBQyxNQUFNLEVBQUMsQ0FBQzs7Z0JBRTdFLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLHdCQUFVLENBQUMsWUFBWSxDQTNCNUIscUJBQU8sQ0FpQ2tvcEIsY0FBZSxDQU4zbnBCLElBQUksQ0FBQyxNQUFNLEVBQUcsSUFBSSxDQUFDLE1BQU0sRUFBQyxDQUFDO1NBQ3BGO1FBRUQsSUFBSSxDQUFDLFFBQVEsSUFBSSxrQkFBSSxDQUFDLFNBQVMsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDO0lBQ3JELENBQUM7Q0FFSjtBQTlCRCw4QkE4QkMifQ==","assetPath":"Assets/Scripts/Oscillation.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"point1","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"point2","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"moveSpeed","type":"System.Single","isArray":false,"initValue":["5"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"lookDir","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Oscillation","description":""},"isCompiled":true}'
+  typescriptHash: 4ff7240fcc244b5dd00636e327403944
+  onlyWriteTrigger: 0

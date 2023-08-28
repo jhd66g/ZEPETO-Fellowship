@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: 1ad4ad06f72a96f49b7471e4ffc358ec
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ItemCollectionManager_1
+    = require(\"./ItemCollectionManager\");\r\nclass ItemCollection extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.itemValue
+    = 1;\r\n        this.itemID = -1;\r\n    }\r\n    Awake() {\r\n        ItemCollectionManager_1.default.GetInstance().AddCoin(this);\r\n   
+    }\r\n    SetItemID(id) {\r\n        this.itemID = id;\r\n    }\r\n    OnTriggerEnter(other)
+    {\r\n        if (other.tag == \"Player\") {\r\n            this.CollectCoin();\r\n       
+    }\r\n    }\r\n    CollectCoin() {\r\n        ItemCollectionManager_1.default.GetInstance().CollectCoin(this.itemID);\r\n       
+    ItemCollectionManager_1.default.GetInstance().RemoveCoin(this.itemID);\r\n       
+    UnityEngine_1.GameObject.Destroy(this.gameObject);\r\n    }\r\n}\r\nexports.default
+    = ItemCollection;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSXRlbUNvbGxlY3Rpb24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJJdGVtQ29sbGVjdGlvbi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUE2RDtBQUU3RCxpREFBcUQ7QUFDckQsbUVBQTREO0FBRTVELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFBakU7O1FBQ1csY0FBUyxHQUFZLENBQUMsQ0FBQztRQUN0QixXQUFNLEdBQVcsQ0FBQyxDQUFDLENBQUM7SUEwQmhDLENBQUM7SUF4QlUsS0FBSztRQUVSLCtCQUFxQixDQUFDLFdBQVcsRUFBRSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUN0RCxDQUFDO0lBRU0sU0FBUyxDQUFDLEVBQVU7UUFFdkIsSUFBSSxDQUFDLE1BQU0sR0FBRyxFQUFFLENBQUM7SUFDckIsQ0FBQztJQUVNLGNBQWMsQ0FBQyxLQUFlO1FBRWpDLElBQUksS0FBSyxDQUFDLEdBQUcsSUFBSSxRQUFRLEVBQ3pCO1lBQ0ksSUFBSSxDQUFDLFdBQVcsRUFBRSxDQUFDO1NBQ3RCO0lBQ0wsQ0FBQztJQUVPLFdBQVc7UUFFZiwrQkFBcUIsQ0FBQyxXQUFXLEVBQUUsQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDO1FBQzdELCtCQUFxQixDQUFDLFdBQVcsRUFBRSxDQUFDLFVBQVUsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUM7UUFDNUQsd0JBQVUsQ0FBQyxPQUFPLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDO0lBQ3hDLENBQUM7Q0FDSjtBQTVCRCxpQ0E0QkMifQ==","assetPath":"Assets/Scripts/ItemCollection.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"itemValue","type":"System.Single","isArray":false,"initValue":["1"],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ItemCollection","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: fda1d69e4840d37abeb302770d4fbcf1
+  onlyWriteTrigger: 0
